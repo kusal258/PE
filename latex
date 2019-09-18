@@ -1,0 +1,94 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{default}      
+  \usecolortheme{beaver}
+  \usefonttheme{professionalfonts}  
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title[Your Short Title]{Fourier Series}
+\author{Chandra Shekhar\\C V Sai Kusal Reddy}
+\institute{EE17BTECH11011\\EE17BTECH11012}
+
+
+\date{September 19, 2019}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+\begin{frame}{Question Number 5.5 (Fourier Series through Python)}
+\begin{itemize}
+\item Demonstrate your results through a python script.
+\end{itemize}
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Description}
+
+\begin{itemize}
+  \item Given, the output voltage of transformer is 12 V (rms).\newline
+  \item The peak voltage of transformer is given by $V_{m}$ = 2*$V_{rms}$ .\newline
+  \item The threshold voltage of each diode is $V_{th}$ =0.7 .\newline
+  \item And,the peak voltage of Bridge rectifier output is given by \newline $V_{r}$=$V_{m}$-2*$V_{th}$ .
+  
+\end{itemize} 
+\end{frame}
+
+\section{Some \LaTeX{} Examples}
+
+\subsection{Tables and Figures}
+
+\begin{frame}{Description}
+\begin{itemize}
+\item The Bridge rectifier output can be expressed as \( V(t) = $V_{r}$\mid Sin(2\pi$f_{o}$t) \mid\)
+\item As V(t) is a periodic signal , \newline From Fourier Series \( V(t) = $$\sum_{n=0}^{\infty} $a_{n}$Cos(2\pi n$f_{o}$t)+$b_{n}$Sin(2\pi n$f_{o}$t)$$ \)      
+
+\newline          where 
+\newline      $a_{n}$ = -4/\pi(n^2-1)    if n=even  
+ \newline                      $a_{n}$  =  0            if n=odd
+\newline           $b_{n}$  =0          for all n
+
+
+\end{itemize} 
+\end{frame}
+
+\subsection{Sketch}
+
+
+
+\begin{frame}{Description}
+\begin{itemize}
+\item The Fourier series of V(t) is
+\item V(t) = 2/\pi -(4/\pi)$$\sum_{n=2,4,..}^{\infty}Cos(2\pi n$f_{o}$t)/(n^2-1) $$
+
+\end{itemize}
+\end{frame}
+\begin{frame}{Plot}
+\begin{figure}
+\includegraphics[width=80mm]{plot.png}
+\caption{v(t) vs t }
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Code}
+https://github.com/kusal258/PE/blob/master/code.py
+
+\end{frame}
+
+
+\end{document}
